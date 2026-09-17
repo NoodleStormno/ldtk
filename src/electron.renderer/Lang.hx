@@ -2,6 +2,12 @@ import dn.data.GetText;
 
 class Lang {
 	// Text constants
+	public static var LANGUAGES = [
+		{ id: "en", label: "English" },
+		{ id: "zh-CN", label: "简体中文" },
+	];
+
+	// Text constants
 	public static var _Untagged = ()->t._("Untagged");
 	public static var _Duplicate = (?v:String) -> v==null ? t._("Duplicate") : t._("Duplicate ::e::", {e:v});
 	public static var _Copy = (?v:String) -> v==null ? t._("Copy") : t._("Copy ::e::", {e:v});
@@ -14,21 +20,142 @@ class Lang {
 
 	// Misc
 	static var _initDone = false;
-	static var DEFAULT = "en";
+	public static var DEFAULT = "en";
 	public static var CUR = "??";
 	public static var t : GetText;
 
+	static var _spaceRegex = ~/[\r\n\t]+/g;
+	static var _multiSpaceRegex = ~/[ ]{2,}/g;
 
 	public static function init(?lid:String) {
-		if( _initDone )
+		if( _initDone && lid!=null && lid==CUR )
 			return;
 
-		_initDone = true;
-		CUR = lid==null ? DEFAULT : lid;
-
-		t = new GetText();
-		t.readPo( hxd.Res.load("lang/"+CUR+".po").entry.getBytes() );
+		setLanguage(lid==null ? DEFAULT : lid);
 	}
+
+	public static function setLanguage(lid:String) {
+		CUR = lid==null || lid=="" ? DEFAULT : lid;
+		t = new GetText();
+		_initDone = true;
+
+		var loaded = false;
+		#if (electron || nodejs)
+		try {
+			var appDir = dn.js.ElectronTools.getAppResourceDir();
+			var path = dn.FilePath.fromFile(appDir + "res/lang/" + CUR + ".po");
+			if( dn.js.NodeTools.fileExists(path.full) ) {
+				var bytes = dn.js.NodeTools.readFileBytes(path.full);
+				t.readPo(bytes);
+				loaded = true;
+			}
+		} catch(_) {}
+		#end
+
+		if( !loaded ) {
+			try {
+				t.readPo( hxd.Res.load("lang/"+CUR+".po").entry.getBytes() );
+				loaded = true;
+			} catch(e:Dynamic) {
+				try {
+					t.readPo( hxd.Res.load("lang/"+DEFAULT+".po").entry.getBytes() );
+				} catch(_) {}
+			}
+		}
+	}
+
+	public static function getText(str:Null<String>, ?vars:Dynamic) : String {
+		if( str==null || str.length==0 )
+			return str;
+
+		if( t==null )
+			init();
+
+		var trimmed = StringTools.trim(str);
+		if( trimmed.length==0 )
+			return str;
+
+		var dict = t.getRawDict();
+		if( dict.exists(trimmed) )
+			return t.get(trimmed, vars);
+
+		if( dict.exists(str) )
+			return t.get(str, vars);
+
+		var normalized = _multiSpaceRegex.replace( _spaceRegex.replace(trimmed, " "), " " );
+		if( dict.exists(normalized) )
+			return t.get(normalized, vars);
+
+		return t.get(str, vars);
+	}
+
+	#if (electron || nodejs)
+	public static function localizeDom(jCtx:js.jquery.JQuery) : Void {
+		if( jCtx==null || t==null || CUR=="en" )
+			return;
+
+		// Localize attributes: title, placeholder, data-title
+		jCtx.find("[title], [placeholder], [data-title]").each( function(idx, el) {
+			var jEl = new js.jquery.JQuery(el);
+			var title = jEl.attr("title");
+			if( title!=null && title!="" && !StringTools.startsWith(title, "http") && !StringTools.startsWith(title, "mailto:") ) {
+				var trans = getText(title);
+				if( trans!=title )
+					jEl.attr("title", trans);
+			}
+			var dataTitle = jEl.attr("data-title");
+			if( dataTitle!=null && dataTitle!="" && !StringTools.startsWith(dataTitle, "http") && !StringTools.startsWith(dataTitle, "mailto:") ) {
+				var trans = getText(dataTitle);
+				if( trans!=dataTitle )
+					jEl.attr("data-title", trans);
+			}
+			var placeholder = jEl.attr("placeholder");
+			if( placeholder!=null && placeholder!="" ) {
+				var trans = getText(placeholder);
+				if( trans!=placeholder )
+					jEl.attr("placeholder", trans);
+			}
+		});
+
+		// Localize text nodes inside UI elements
+		var selector = "h1, h2, h3, h4, h5, button, label, p, em, strong, span:not(.icon):not(.key), dt:not(.full), div.title, div.help, info, warning, .tip .text";
+		jCtx.find(selector).addBack(selector).each( function(idx, el) {
+			var domEl : js.html.Element = cast el;
+			if( domEl==null || domEl.childNodes==null )
+				return;
+			var childNodes = domEl.childNodes;
+			for(i in 0...childNodes.length) {
+				var node = childNodes.item(i);
+				if( node.nodeType == 3 ) { // Node.TEXT_NODE
+					var rawVal = node.nodeValue;
+					if( rawVal==null )
+						continue;
+					var trimmed = StringTools.trim(rawVal);
+					if( trimmed.length==0 )
+						continue;
+
+					var trans = getText(trimmed);
+					if( trans!=trimmed ) {
+						var len = rawVal.length;
+						var start = 0;
+						while( start<len ) {
+							var c = rawVal.charCodeAt(start);
+							if( c==32 || c==9 || c==10 || c==13 ) start++; else break;
+						}
+						var end = len;
+						while( end>start ) {
+							var c = rawVal.charCodeAt(end-1);
+							if( c==32 || c==9 || c==10 || c==13 ) end--; else break;
+						}
+						var leading = rawVal.substring(0, start);
+						var trailing = rawVal.substring(end);
+						node.nodeValue = leading + trans + trailing;
+					}
+				}
+			}
+		});
+	}
+	#end
 
 	public static inline function onOff(v:Null<Bool>) {
 		return v==true ? t._("ON") : t._("off");

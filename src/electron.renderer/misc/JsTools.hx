@@ -651,6 +651,9 @@ class JsTools {
 
 
 	public static function parseComponents(jCtx:js.jquery.JQuery) : Void {
+		// Localize DOM elements
+		L.localizeDom(jCtx);
+
 		// Disable img dragging
 		jCtx.find("img").attr("draggable","false");
 
@@ -677,7 +680,7 @@ class JsTools {
 					);
 				}
 				else
-					jThis.data("str", jThis.text());
+					jThis.data("str", L.getText(jThis.text()));
 				jThis.empty();
 			}
 			ui.Tip.attach(jThis, jThis.data("str"), "infoTip");
@@ -746,7 +749,7 @@ class JsTools {
 				jThis.removeAttr("title");
 				jThis.attr("data-title", str);
 			}
-			var tipStr = jThis.attr("data-title");
+			var tipStr = L.getText(jThis.attr("data-title"));
 
 			// Parse key shortcut
 			var keys = [];

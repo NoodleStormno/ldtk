@@ -39,6 +39,7 @@ typedef AppSettings = {
 	var uiStates : Array<{ id:String, val:Int }>;
 	var lastUiDirs : Array<{ ?project:String, uiId:String, path:String }>;
 	var projectTrusts : Array<{ iid:String, trusted:Bool }>;
+	var ?locale : String;
 }
 
 enum abstract UiState(String) {
@@ -117,6 +118,7 @@ class Settings {
 			uiStates: [],
 			lastUiDirs: [],
 			projectTrusts: [],
+			locale: null,
 		}
 
 		// Load
@@ -153,6 +155,30 @@ class Settings {
 		#end
 
 		initDefaultGlobalUiState(ShowProjectColors, 1);
+	}
+
+	public function getLocale() : String {
+		if( v.locale!=null && v.locale!="" )
+			return v.locale;
+
+		#if editor
+		try {
+			if( js.Browser.navigator.languages!=null ) {
+				for(full in js.Browser.navigator.languages) {
+					var low = full.toLowerCase();
+					if( low.indexOf("zh")==0 )
+						return "zh-CN";
+				}
+			}
+			if( js.Browser.navigator.language!=null ) {
+				var low = js.Browser.navigator.language.toLowerCase();
+				if( low.indexOf("zh")==0 )
+					return "zh-CN";
+			}
+		} catch(_) {}
+		#end
+
+		return "en";
 	}
 
 
