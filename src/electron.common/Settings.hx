@@ -168,12 +168,28 @@ class Settings {
 					var low = full.toLowerCase();
 					if( low.indexOf("zh")==0 )
 						return "zh-CN";
+					if( low.indexOf("ja")==0 )
+						return "ja";
+					if( low.indexOf("fr")==0 )
+						return "fr";
+					if( low.indexOf("es")==0 )
+						return "es";
+					if( low.indexOf("de")==0 )
+						return "de";
 				}
 			}
 			if( js.Browser.navigator.language!=null ) {
 				var low = js.Browser.navigator.language.toLowerCase();
 				if( low.indexOf("zh")==0 )
 					return "zh-CN";
+				if( low.indexOf("ja")==0 )
+					return "ja";
+				if( low.indexOf("fr")==0 )
+					return "fr";
+				if( low.indexOf("es")==0 )
+					return "es";
+				if( low.indexOf("de")==0 )
+					return "de";
 			}
 		} catch(_) {}
 		#end

@@ -5,6 +5,10 @@ class Lang {
 	public static var LANGUAGES = [
 		{ id: "en", label: "English" },
 		{ id: "zh-CN", label: "简体中文" },
+		{ id: "ja", label: "日本語" },
+		{ id: "fr", label: "Français" },
+		{ id: "es", label: "Español" },
+		{ id: "de", label: "Deutsch" },
 	];
 
 	// Text constants
