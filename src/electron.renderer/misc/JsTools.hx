@@ -81,7 +81,7 @@ class JsTools {
 		if( allowNull ) {
 			var jOpt = new J("<option/>");
 			jSelect.prepend(jOpt);
-			jOpt.text( printer==null ? Lang.t._("(none)") : printer(null) );
+			jOpt.text( printer==null ? Lang.t._("(none)") : Lang.getText(printer(null)) );
 			jOpt.attr("value", "");
 			if( cur==null ) {
 				jSelect.addClass("isNull");
@@ -94,7 +94,7 @@ class JsTools {
 		for(v in allValues) {
 			var jOpt = new J('<option value="$i"/>');
 			jSelect.append(jOpt);
-			jOpt.text(printer!=null ? printer(v) : Std.string(v));
+			jOpt.text(Lang.getText(printer!=null ? printer(v) : Std.string(v)));
 
 			if( def!=null && v==def )
 				jOpt.append(" "+L.t._("(default)"));
@@ -132,7 +132,7 @@ class JsTools {
 		if( nullLabel==null )
 			nullLabel = "Select a tileset";
 		if( allowNull || curUid==null ) {
-			var jOpt = new J('<option value="-1">-- $nullLabel --</option>');
+			var jOpt = new J('<option value="-1">-- ${Lang.getText(nullLabel)} --</option>');
 			jOpt.appendTo(jSelect);
 		}
 

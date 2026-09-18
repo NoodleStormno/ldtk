@@ -157,7 +157,7 @@ class ContextMenu extends ui.Modal {
 
 
 	public function addTitle(str:LocaleString) {
-		var jTitle = new J('<div class="title">$str</div>');
+		var jTitle = new J('<div class="title">${Lang.getText(str)}</div>');
 		jTitle.appendTo(jContent);
 		applyAnchor();
 	}

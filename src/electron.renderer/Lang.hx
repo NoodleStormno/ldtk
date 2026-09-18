@@ -95,7 +95,7 @@ class Lang {
 			return;
 
 		// Localize attributes: title, placeholder, data-title
-		jCtx.find("[title], [placeholder], [data-title]").each( function(idx, el) {
+		jCtx.find("[title], [placeholder], [data-title]").addBack("[title], [placeholder], [data-title]").each( function(idx, el) {
 			var jEl = new js.jquery.JQuery(el);
 			var title = jEl.attr("title");
 			if( title!=null && title!="" && !StringTools.startsWith(title, "http") && !StringTools.startsWith(title, "mailto:") ) {
@@ -117,39 +117,63 @@ class Lang {
 			}
 		});
 
-		// Localize text nodes inside UI elements
-		var selector = "h1, h2, h3, h4, h5, button, label, p, em, strong, span:not(.icon):not(.key), dt:not(.full), div.title, div.help, info, warning, .tip .text";
-		jCtx.find(selector).addBack(selector).each( function(idx, el) {
+		// Localize text nodes and options across all UI elements
+		jCtx.find("*").addBack().each( function(idx, el) {
 			var domEl : js.html.Element = cast el;
-			if( domEl==null || domEl.childNodes==null )
+			if( domEl==null )
 				return;
-			var childNodes = domEl.childNodes;
-			for(i in 0...childNodes.length) {
-				var node = childNodes.item(i);
-				if( node.nodeType == 3 ) { // Node.TEXT_NODE
-					var rawVal = node.nodeValue;
-					if( rawVal==null )
-						continue;
-					var trimmed = StringTools.trim(rawVal);
-					if( trimmed.length==0 )
-						continue;
 
-					var trans = getText(trimmed);
-					if( trans!=trimmed ) {
-						var len = rawVal.length;
-						var start = 0;
-						while( start<len ) {
-							var c = rawVal.charCodeAt(start);
-							if( c==32 || c==9 || c==10 || c==13 ) start++; else break;
+			var tag = domEl.tagName.toLowerCase();
+			if( tag=="script" || tag=="style" || tag=="code" || tag=="pre" || tag=="canvas" || tag=="svg" || tag=="input" || tag=="textarea" )
+				return;
+
+			if( domEl.classList!=null && (domEl.classList.contains("icon") || domEl.classList.contains("key") || domEl.classList.contains("code")) )
+				return;
+
+			// Handle <option> elements in select dropdowns
+			if( tag=="option" ) {
+				var opt : js.html.OptionElement = cast domEl;
+				var rawText = opt.text;
+				if( rawText!=null && rawText.length>0 ) {
+					var trimmed = StringTools.trim(rawText);
+					if( trimmed.length>0 ) {
+						var trans = getText(trimmed);
+						if( trans!=trimmed )
+							opt.text = trans;
+					}
+				}
+				return;
+			}
+
+			// Localize direct text nodes
+			if( domEl.childNodes!=null ) {
+				for(i in 0...domEl.childNodes.length) {
+					var node = domEl.childNodes.item(i);
+					if( node.nodeType == 3 ) { // Node.TEXT_NODE
+						var rawVal = node.nodeValue;
+						if( rawVal==null )
+							continue;
+						var trimmed = StringTools.trim(rawVal);
+						if( trimmed.length==0 )
+							continue;
+
+						var trans = getText(trimmed);
+						if( trans!=trimmed ) {
+							var len = rawVal.length;
+							var start = 0;
+							while( start<len ) {
+								var c = rawVal.charCodeAt(start);
+								if( c==32 || c==9 || c==10 || c==13 ) start++; else break;
+							}
+							var end = len;
+							while( end>start ) {
+								var c = rawVal.charCodeAt(end-1);
+								if( c==32 || c==9 || c==10 || c==13 ) end--; else break;
+							}
+							var leading = rawVal.substring(0, start);
+							var trailing = rawVal.substring(end);
+							node.nodeValue = leading + trans + trailing;
 						}
-						var end = len;
-						while( end>start ) {
-							var c = rawVal.charCodeAt(end-1);
-							if( c==32 || c==9 || c==10 || c==13 ) end--; else break;
-						}
-						var leading = rawVal.substring(0, start);
-						var trailing = rawVal.substring(end);
-						node.nodeValue = leading + trans + trailing;
 					}
 				}
 			}

@@ -1,11 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: LDtk 1.5.3\n"
-"Language: en\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
 
 msgid "\","
 msgstr "\","
@@ -13,11 +10,20 @@ msgstr "\","
 msgid "\"..."
 msgstr "\"..."
 
+msgid "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¥ÃÂÃÂÃÂÃÂ¯ÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ"
+msgstr "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¥ÃÂÃÂÃÂÃÂ¯ÃÂÃÂÃÂÃÂ¸ÃÂÃÂÃÂÃÂ"
+
+msgid "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¥ÃÂÃÂ¯ÃÂÃÂ¸ÃÂÃÂ"
+msgstr "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¥ÃÂÃÂ¯ÃÂÃÂ¸ÃÂÃÂ"
+
+msgid "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ÃÂ¢ÃÂÃÂ¥ÃÂ¯ÃÂ¸ÃÂ"
+msgstr "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ÃÂ¢ÃÂÃÂ¥ÃÂ¯ÃÂ¸ÃÂ"
+
+msgid "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day Ã¢ÂÂ¥Ã¯Â¸Â"
+msgstr "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day Ã¢ÂÂ¥Ã¯Â¸Â"
+
 msgid "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day â¥ï¸"
 msgstr "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day â¥ï¸"
-
-msgid "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ♥️"
-msgstr "\"::name::\" image was modified but it was SMALLER than the old version.\nLuckily, the tileset had some PADDING, so I was able to use it to compensate the difference.\nSo everything is ok, have a nice day ♥️"
 
 msgid "\"::name::\" image was updated, but the new version is smaller than the previous one.\nSome tiles might have been lost in the process. It is recommended to check this carefully before saving this project!"
 msgstr "\"::name::\" image was updated, but the new version is smaller than the previous one.\nSome tiles might have been lost in the process. It is recommended to check this carefully before saving this project!"
@@ -28,11 +34,23 @@ msgstr "\"Ab\""
 msgid "\"Ab\\n\""
 msgstr "\"Ab\\n\""
 
+msgid "\"MY_IDENTIFIER_1\" -- Full uppercase"
+msgstr "\"MY_IDENTIFIER_1\" -- Full uppercase"
+
+msgid "\"My_identifier_1\" -- First letter is always uppercase, the rest is up to you"
+msgstr "\"My_identifier_1\" -- First letter is always uppercase, the rest is up to you"
+
 msgid "\"Nearby levels\" tiles rendering distance"
 msgstr "\"Nearby levels\" tiles rendering distance"
 
 msgid "\"Out-of-bounds\" policy"
 msgstr "\"Out-of-bounds\" policy"
+
+msgid "\"my_IdEnTifIeR_1\" -- I wON\\'t cHaNge yOuR leTteR caSe"
+msgstr "\"my_IdEnTifIeR_1\" -- I wON\\'t cHaNge yOuR leTteR caSe"
+
+msgid "\"my_identifier_1\" -- Full lowercase"
+msgstr "\"my_identifier_1\" -- Full lowercase"
 
 msgid "% Fill="
 msgstr "% Fill="
@@ -166,6 +184,9 @@ msgstr "..."
 msgid ".::patchVer::"
 msgstr ".::patchVer::"
 
+msgid "// Write version from args\n		window.location.search\n			.substr(1)\n			.split(\"&\")\n			.forEach(function (item) {\n				if( item.split(\"=\")[0]==\"patchVersion\" )\n					document.getElementById(\"patchVersion\").innerHTML = item.split(\"=\")[1];\n				if( item.split(\"=\")[0]==\"mainVersion\" )\n					document.getElementById(\"mainVersion\").innerHTML = item.split(\"=\")[1];\n			});"
+msgstr "// Write version from args\n		window.location.search\n			.substr(1)\n			.split(\"&\")\n			.forEach(function (item) {\n				if( item.split(\"=\")[0]==\"patchVersion\" )\n					document.getElementById(\"patchVersion\").innerHTML = item.split(\"=\")[1];\n				if( item.split(\"=\")[0]==\"mainVersion\" )\n					document.getElementById(\"mainVersion\").innerHTML = item.split(\"=\")[1];\n			});"
+
 msgid "1 hour ago"
 msgstr "1 hour ago"
 
@@ -250,6 +271,9 @@ msgstr "<strong>WARNING:</strong> you are trying to create a project in the appl
 msgid "<strong>WARNING:</strong> you are trying to save a file in the application directory!\n<strong>Any file saved here will be LOST during next app update.</strong>"
 msgstr "<strong>WARNING:</strong> you are trying to save a file in the application directory!\n<strong>Any file saved here will be LOST during next app update.</strong>"
 
+msgid "???"
+msgstr "???"
+
 msgid "A backup of your project was saved to:"
 msgstr "A backup of your project was saved to:"
 
@@ -267,6 +291,9 @@ msgstr "A rule is used to display a specific tile based on the content of an Int
 
 msgid "AND"
 msgstr "AND"
+
+msgid "Accepted formats:\\n {\\n  \"MyEnum1\": \"a,b,c\",\\n  \"MyEnum2\": \"a b c\",\\n  \"MyEnum3\": [\"a\",\"b\",\"c\"]\\n }"
+msgstr "Accepted formats:\\n {\\n  \"MyEnum1\": \"a,b,c\",\\n  \"MyEnum2\": \"a b c\",\\n  \"MyEnum3\": [\"a\",\"b\",\"c\"]\\n }"
 
 msgid "Actual render of tiles only happens a few milliseconds after painting.\\nUse this if your layer is very complex or large, and painting anything in it is getting too slow."
 msgstr "Actual render of tiles only happens a few milliseconds after painting.\\nUse this if your layer is very complex or large, and painting anything in it is getting too slow."
@@ -505,6 +532,9 @@ msgstr "Backup failed!"
 msgid "Backup file"
 msgstr "Backup file"
 
+msgid "Backup files should not be edited directly"
+msgstr "Backup files should not be edited directly"
+
 msgid "Backup folder"
 msgstr "Backup folder"
 
@@ -603,6 +633,12 @@ msgstr "Cancel"
 
 msgid "Canceled action"
 msgstr "Canceled action"
+
+msgid "Cannot run commands for now"
+msgstr "Cannot run commands for now"
+
+msgid "Cannot save over a backup file."
+msgstr "Cannot save over a backup file."
 
 msgid "CastleDB"
 msgstr "CastleDB"
@@ -715,6 +751,9 @@ msgstr "Color picker"
 msgid "Colors used for this element"
 msgstr "Colors used for this element"
 
+msgid "Command executed:"
+msgstr "Command executed:"
+
 msgid "Command output"
 msgstr "Command output"
 
@@ -772,6 +811,9 @@ msgstr "Copy error details"
 msgid "Copy error infos"
 msgstr "Copy error infos"
 
+msgid "Could not copy value, JSON writer failed!"
+msgstr "Could not copy value, JSON writer failed!"
+
 msgid "Could not load this image"
 msgstr "Could not load this image"
 
@@ -780,6 +822,12 @@ msgstr "Could not read file content."
 
 msgid "Could not write the project JSON file here! Maybe the destination is read-only?"
 msgstr "Could not write the project JSON file here! Maybe the destination is read-only?"
+
+msgid "Couldn't create this project file!"
+msgstr "Couldn't create this project file!"
+
+msgid "Couldn't find any simple Enum in this source fileContent."
+msgstr "Couldn't find any simple Enum in this source fileContent."
 
 msgid "Couldn't read file: ::name::"
 msgstr "Couldn't read file: ::name::"
@@ -1048,6 +1096,9 @@ msgstr "Documentation"
 msgid "Don't export any image"
 msgstr "Don't export any image"
 
+msgid "Done"
+msgstr "Done"
+
 msgid "Downloading update..."
 msgstr "Downloading update..."
 
@@ -1090,6 +1141,12 @@ msgstr "EDIT"
 msgid "ENTITIES are generic data that can be placed in your levels, such as the Player start position or Items to pick up. Each entity can have various custom editable properties as defined below."
 msgstr "ENTITIES are generic data that can be placed in your levels, such as the Player start position or Items to pick up. Each entity can have various custom editable properties as defined below."
 
+msgid "ERROR: rule not found in DOM"
+msgstr "ERROR: rule not found in DOM"
+
+msgid "ERROR: ruleGroup not found in DOM"
+msgstr "ERROR: ruleGroup not found in DOM"
+
 msgid "ESCAPE"
 msgstr "ESCAPE"
 
@@ -1098,6 +1155,9 @@ msgstr "Each LEVEL in your project has LAYERS, as defined below. The layers cont
 
 msgid "Edit"
 msgstr "Edit"
+
+msgid "Edit \"out-of-bounds\" policy for all rules"
+msgstr "Edit \"out-of-bounds\" policy for all rules"
 
 msgid "Edit custom fields"
 msgstr "Edit custom fields"
@@ -1146,6 +1206,9 @@ msgstr "Enable help"
 
 msgid "Enable multi-worlds feature to manage multiple separate level layouts inside a single project."
 msgstr "Enable multi-worlds feature to manage multiple separate level layouts inside a single project."
+
+msgid "Enable random mode for current selection of tiles"
+msgstr "Enable random mode for current selection of tiles"
 
 msgid "Enable this option to use color-blind friendly colors by default for newly created entities, enums or intGrid values."
 msgstr "Enable this option to use color-blind friendly colors by default for newly created entities, enums or intGrid values."
@@ -1294,6 +1357,9 @@ msgstr "Eraser"
 msgid "Error during project saving"
 msgstr "Error during project saving"
 
+msgid "Error reloading:"
+msgstr "Error reloading:"
+
 msgid "Errors in current layer settings prevent rules to be applied. It can't be baked now."
 msgstr "Errors in current layer settings prevent rules to be applied. It can't be baked now."
 
@@ -1320,6 +1386,9 @@ msgstr "Excluded tags"
 
 msgid "Expand group"
 msgstr "Expand group"
+
+msgid "Expected format:\\n - One enum per line\\n - Each line: \"MyEnumId : value1, value2, value3\""
+msgstr "Expected format:\\n - One enum per line\\n - Each line: \"MyEnumId : value1, value2, value3\""
 
 msgid "Explanation"
 msgstr "Explanation"
@@ -1384,8 +1453,17 @@ msgstr "F12: Open app settings"
 msgid "Fade LDtk window when not focused"
 msgstr "Fade LDtk window when not focused"
 
+msgid "Failed"
+msgstr "Failed"
+
 msgid "Failed on ::file::"
 msgstr "Failed on ::file::"
+
+msgid "Failed to create PNG in layer \"::layerId::\" from level \"::levelId::\""
+msgstr "Failed to create PNG in layer \"::layerId::\" from level \"::levelId::\""
+
+msgid "Failed to create background PNG in level \"::id::\""
+msgstr "Failed to create background PNG in level \"::id::\""
 
 msgid "Failed to import this Ogmo project. If you really need this, feel free to send me the Ogmo project file so I can check and fix the updater (see contact link)."
 msgstr "Failed to import this Ogmo project. If you really need this, feel free to send me the Ogmo project file so I can check and fix the updater (see contact link)."
@@ -1404,6 +1482,9 @@ msgstr "Field type"
 
 msgid "Fields"
 msgstr "Fields"
+
+msgid "File \"::name::\" saved."
+msgstr "File \"::name::\" saved."
 
 msgid "File extensions"
 msgstr "File extensions"
@@ -1444,6 +1525,9 @@ msgstr "Fit inside (keep aspect ratio)"
 msgid "Fit inside bounds"
 msgstr "Fit inside bounds"
 
+msgid "Fit tileset view in the interface panel"
+msgstr "Fit tileset view in the interface panel"
+
 msgid "Fit view"
 msgstr "Fit view"
 
@@ -1468,6 +1552,9 @@ msgstr "Float:"
 msgid "Flood-fill the current area with the selected value."
 msgstr "Flood-fill the current area with the selected value."
 
+msgid "Flushed."
+msgstr "Flushed."
+
 msgid "For example, if you want to paint \"wall blocks\" where you have the IntGrid value \"1\" in your level, you just put the IntGrid value \"1\" in the center of this pattern."
 msgstr "For example, if you want to paint \"wall blocks\" where you have the IntGrid value \"1\" in your level, you just put the IntGrid value \"1\" in the center of this pattern."
 
@@ -1485,6 +1572,12 @@ msgstr "Full size (cropped in bounds)"
 
 msgid "Full size (not cropped)"
 msgstr "Full size (not cropped)"
+
+msgid "GIF mode: ON"
+msgstr "GIF mode: ON"
+
+msgid "GIF mode: off"
+msgstr "GIF mode: off"
 
 msgid "General"
 msgstr "General"
@@ -1578,6 +1671,9 @@ msgstr "Horizontal offset of the X modulo"
 
 msgid "Horizontally"
 msgstr "Horizontally"
+
+msgid "I need to create a folder named \"::name::\", but there is a file with the exact same name there."
+msgstr "I need to create a folder named \"::name::\", but there is a file with the exact same name there."
 
 msgid "I understand the risks, allow user commands"
 msgstr "I understand the risks, allow user commands"
@@ -1759,6 +1855,9 @@ msgstr "Image reloaded: ::file::"
 msgid "Image source"
 msgstr "Image source"
 
+msgid "Image updated:"
+msgstr "Image updated:"
+
 msgid "Import"
 msgstr "Import"
 
@@ -1767,6 +1866,9 @@ msgstr "Import a project from another app"
 
 msgid "Import external enum"
 msgstr "Import external enum"
+
+msgid "Import failed: the file contains the Enum \""
+msgstr "Import failed: the file contains the Enum \""
 
 msgid "In advanced mode, you will be able to edit manually all the rules or add new ones, for more advanced results.\nWARNING: enabling advanced mode will prevent you from using the Rule Assistant anymore on this particular group."
 msgstr "In advanced mode, you will be able to edit manually all the rules or add new ones, for more advanced results.\nWARNING: enabling advanced mode will prevent you from using the Rule Assistant anymore on this particular group."
@@ -1800,6 +1902,15 @@ msgstr "Integer grid"
 
 msgid "Invalid file name"
 msgstr "Invalid file name"
+
+msgid "Invalid layer tileset"
+msgstr "Invalid layer tileset"
+
+msgid "Invalid reference"
+msgstr "Invalid reference"
+
+msgid "Invalid source IntGrid layer"
+msgstr "Invalid source IntGrid layer"
 
 msgid "Is optional"
 msgstr "Is optional"
@@ -1858,6 +1969,18 @@ msgstr "LICENSING"
 msgid "Language"
 msgstr "Language"
 
+msgid "Language / ÃÂÃÂ¨ÃÂÃÂ¯ÃÂÃÂ­ÃÂÃÂ¨ÃÂÃÂ¨ÃÂÃÂ"
+msgstr "Language / ÃÂÃÂ¨ÃÂÃÂ¯ÃÂÃÂ­ÃÂÃÂ¨ÃÂÃÂ¨ÃÂÃÂ"
+
+msgid "Language / ÃÂ¨ÃÂ¯ÃÂ­ÃÂ¨ÃÂ¨ÃÂ"
+msgstr "Language / ÃÂ¨ÃÂ¯ÃÂ­ÃÂ¨ÃÂ¨ÃÂ"
+
+msgid "Language / Ã¨Â¯Â­Ã¨Â¨Â"
+msgstr "Language / Ã¨Â¯Â­Ã¨Â¨Â"
+
+msgid "Language / è¯­è¨"
+msgstr "Language / è¯­è¨"
+
 msgid "Language / 语言"
 msgstr "Language / 语言"
 
@@ -1885,11 +2008,17 @@ msgstr "Learn more about Tiled export limitations"
 msgid "Learn more about this format"
 msgstr "Learn more about this format"
 
+msgid "Left click to change\nRight click to remove"
+msgstr "Left click to change\nRight click to remove"
+
 msgid "Left click: Draw / Paint"
 msgstr "Left click: Draw / Paint"
 
 msgid "Level"
 msgstr "Level"
+
+msgid "Level ::id:: removed"
+msgstr "Level ::id:: removed"
 
 msgid "Level UI scale"
 msgstr "Level UI scale"
@@ -1978,6 +2107,9 @@ msgstr "Locate project file"
 msgid "Locate the file"
 msgstr "Locate the file"
 
+msgid "Locating file..."
+msgstr "Locating file..."
+
 msgid "Lock layer"
 msgstr "Lock layer"
 
@@ -2022,6 +2154,9 @@ msgstr "Max:"
 
 msgid "May"
 msgstr "May"
+
+msgid "Memorize current selection of tiles"
+msgstr "Memorize current selection of tiles"
 
 msgid "Metadata"
 msgstr "Metadata"
@@ -2146,8 +2281,14 @@ msgstr "New layer"
 msgid "New level"
 msgstr "New level"
 
+msgid "New level created"
+msgstr "New level created"
+
 msgid "New project"
 msgstr "New project"
+
+msgid "New project created:"
+msgstr "New project created:"
 
 msgid "New project in this folder"
 msgstr "New project in this folder"
@@ -2167,14 +2308,23 @@ msgstr "New world created"
 msgid "No"
 msgstr "No"
 
+msgid "No change"
+msgstr "No change"
+
 msgid "No fields defined."
 msgstr "No fields defined."
+
+msgid "No file"
+msgstr "No file"
 
 msgid "No layer"
 msgstr "No layer"
 
 msgid "No room for a level here! Do you want to pick another location?"
 msgstr "No room for a level here! Do you want to pick another location?"
+
+msgid "No valid tileset"
+msgstr "No valid tileset"
 
 msgid "No, and I understand the risk."
 msgstr "No, and I understand the risk."
@@ -2184,6 +2334,9 @@ msgstr "None"
 
 msgid "Not scaled"
 msgstr "Not scaled"
+
+msgid "Nothing to select"
+msgstr "Nothing to select"
 
 msgid "Nov"
 msgstr "Nov"
@@ -2302,6 +2455,9 @@ msgstr "Open project"
 msgid "Open project folder"
 msgstr "Open project folder"
 
+msgid "Opening url..."
+msgstr "Opening url..."
+
 msgid "Operation log"
 msgstr "Operation log"
 
@@ -2398,6 +2554,9 @@ msgstr "Plain text"
 msgid "Please locate the original project represented by this backup."
 msgstr "Please locate the original project represented by this backup."
 
+msgid "Please provide requested informations first."
+msgstr "Please provide requested informations first."
+
 msgid "Please restart the app."
 msgstr "Please restart the app."
 
@@ -2422,6 +2581,9 @@ msgstr "Prefix/suffix"
 msgid "Presets"
 msgstr "Presets"
 
+msgid "Press F11 to leave fullscreen"
+msgstr "Press F11 to leave fullscreen"
+
 msgid "Project Enums"
 msgstr "Project Enums"
 
@@ -2439,6 +2601,9 @@ msgstr "Project errors"
 
 msgid "Project file"
 msgstr "Project file"
+
+msgid "Project file not found"
+msgstr "Project file not found"
 
 msgid "Project file setting changed"
 msgstr "Project file setting changed"
@@ -2572,11 +2737,17 @@ msgstr "Remove tag"
 msgid "Remove this external Enum source"
 msgstr "Remove this external Enum source"
 
+msgid "Removed lost folder from history"
+msgstr "Removed lost folder from history"
+
 msgid "Rename"
 msgstr "Rename"
 
 msgid "Rename project"
 msgstr "Rename project"
+
+msgid "Renamed project!"
+msgstr "Renamed project!"
 
 msgid "Renaming should only happen from inside the app as various internal file paths will also need to be updated accordingly."
 msgstr "Renaming should only happen from inside the app as various internal file paths will also need to be updated accordingly."
@@ -2674,6 +2845,9 @@ msgstr "Rule random offsets"
 msgid "Rule size"
 msgstr "Rule size"
 
+msgid "Rule updated"
+msgstr "Rule updated"
+
 msgid "Rules"
 msgstr "Rules"
 
@@ -2728,8 +2902,14 @@ msgstr "Save project to a different file"
 msgid "Saved"
 msgstr "Saved"
 
+msgid "Saved selection"
+msgstr "Saved selection"
+
 msgid "Saved. You need to RESTART the app to apply your changes."
 msgstr "Saved. You need to RESTART the app to apply your changes."
+
+msgid "Saving failed!"
+msgstr "Saving failed!"
 
 msgid "Saving levels"
 msgstr "Saving levels"
@@ -2775,6 +2955,9 @@ msgstr "Select all elements in a rectangle area"
 
 msgid "Select layers"
 msgstr "Select layers"
+
+msgid "Select the editor display language."
+msgstr "Select the editor display language."
 
 msgid "Select tool"
 msgstr "Select tool"
@@ -2826,6 +3009,12 @@ msgstr "Shift R"
 
 msgid "Shift W OR ~"
 msgstr "Shift W OR ~"
+
+msgid "Show \"::name::=...\""
+msgstr "Show \"::name::=...\""
+
+msgid "Show \"::name::=[...values...]\""
+msgstr "Show \"::name::=[...values...]\""
 
 msgid "Show advanced options"
 msgstr "Show advanced options"
@@ -2920,6 +3109,12 @@ msgstr "Sorry but LDtk does not support working on a Network Drive yet.\nSo, for
 msgid "Sorry, but I can't restore this backup: I can't locate the original project file."
 msgstr "Sorry, but I can't restore this backup: I can't locate the original project file."
 
+msgid "Sorry, but this file couldn't be found."
+msgstr "Sorry, but this file couldn't be found."
+
+msgid "Sorry, there\\'s no conversion option available for the type \"::name::\"."
+msgstr "Sorry, there\\'s no conversion option available for the type \"::name::\"."
+
 msgid "Source file"
 msgstr "Source file"
 
@@ -2940,6 +3135,24 @@ msgstr "Straight arrow"
 
 msgid "String"
 msgstr "String"
+
+msgid "Success!"
+msgstr "Success!"
+
+msgid "Successfully moved level to world"
+msgstr "Successfully moved level to world"
+
+msgid "Super simple export ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¤"
+msgstr "Super simple export ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ¤"
+
+msgid "Super simple export ÃÂ¢ÃÂÃÂ¤"
+msgstr "Super simple export ÃÂ¢ÃÂÃÂ¤"
+
+msgid "Super simple export Ã¢ÂÂ¤"
+msgstr "Super simple export Ã¢ÂÂ¤"
+
+msgid "Super simple export â¤"
+msgstr "Super simple export â¤"
 
 msgid "Super simple export ❤"
 msgstr "Super simple export ❤"
@@ -3021,6 +3234,15 @@ msgstr "The current layer settings prevent its rules to work."
 
 msgid "The default setting prevents rules from working on level edges if they are checking for layer values outside of level bounds."
 msgstr "The default setting prevents rules from working on level edges if they are checking for layer values outside of level bounds."
+
+msgid "The destination layer"
+msgstr "The destination layer"
+
+msgid "The file must have the CDB extension."
+msgstr "The file must have the CDB extension."
+
+msgid "The file must have the HX extension."
+msgstr "The file must have the HX extension."
 
 msgid "The file you're trying to save is a ::app:: sample map.\nAny change to it will be lost during automatic updates, so it's NOT recommended to modify it."
 msgstr "The file you're trying to save is a ::app:: sample map.\nAny change to it will be lost during automatic updates, so it's NOT recommended to modify it."
@@ -3184,6 +3406,9 @@ msgstr "This option controls the visual aspect of custom entity fields in the ed
 msgid "This option will ONLY affect how your text will be displayed in the editor (ie. syntax coloring)."
 msgstr "This option will ONLY affect how your text will be displayed in the editor (ie. syntax coloring)."
 
+msgid "This option will have no effect on a symetric rule."
+msgstr "This option will have no effect on a symetric rule."
+
 msgid "This optional description is displayed in a permanent banner on top of LDtk while this project is open.\n			It is mainly used in LDtk sample maps to provide extra explanations of provided examples."
 msgstr "This optional description is displayed in a permanent banner on top of LDtk while this project is open.\n			It is mainly used in LDtk sample maps to provide extra explanations of provided examples."
 
@@ -3207,6 +3432,12 @@ msgstr "This project is allowed to run user commands on your computer."
 
 msgid "This project wants to execute the following command automatically:"
 msgstr "This project wants to execute the following command automatically:"
+
+msgid "This rule has X or Y offsets: they are incompatible with the activation of the Break-on-Match option."
+msgstr "This rule has X or Y offsets: they are incompatible with the activation of the Break-on-Match option."
+
+msgid "This rule has a custom opacity: this is incompatible with the activation of the Break-on-Match option."
+msgstr "This rule has a custom opacity: this is incompatible with the activation of the Break-on-Match option."
 
 msgid "This selection can't be moved around because it contains elements using different grid sizes."
 msgstr "This selection can't be moved around because it contains elements using different grid sizes."
@@ -3240,6 +3471,9 @@ msgstr "This tileset is using an embedded image from LDtk and cannot be modified
 
 msgid "This value is used in some levels: removing it will also remove the value from all these levels. Are you sure?"
 msgstr "This value is used in some levels: removing it will also remove the value from all these levels. Are you sure?"
+
+msgid "This value isn't valid."
+msgstr "This value isn't valid."
 
 msgid "Tile"
 msgstr "Tile"
@@ -3367,6 +3601,9 @@ msgstr "Tutorial description"
 msgid "Type"
 msgstr "Type"
 
+msgid "Type changed to"
+msgstr "Type changed to"
+
 msgid "Type conversion"
 msgstr "Type conversion"
 
@@ -3378,6 +3615,15 @@ msgstr "Unblock it"
 
 msgid "Undo"
 msgstr "Undo"
+
+msgid "Unknown level in invalidateLevelCache()"
+msgstr "Unknown level in invalidateLevelCache()"
+
+msgid "Unknown remapping result:"
+msgstr "Unknown remapping result:"
+
+msgid "Unknown watched image changed:"
+msgstr "Unknown watched image changed:"
 
 msgid "Unlimited"
 msgstr "Unlimited"
@@ -3412,6 +3658,9 @@ msgstr "Updating auto layers..."
 msgid "Use .::ext:: extension"
 msgstr "Use .::ext:: extension"
 
+msgid "Use LEFT click to pick a tile or RIGHT click to remove it."
+msgstr "Use LEFT click to pick a tile or RIGHT click to remove it."
+
 msgid "Use assistant (recommended)"
 msgstr "Use assistant (recommended)"
 
@@ -3444,6 +3693,9 @@ msgstr "Validate"
 
 msgid "Value picker"
 msgstr "Value picker"
+
+msgid "Value reset."
+msgstr "Value reset."
 
 msgid "Value should be GREATER than or EQUAL to this."
 msgstr "Value should be GREATER than or EQUAL to this."
@@ -3568,6 +3820,9 @@ msgstr "Workspace settings"
 msgid "World"
 msgstr "World"
 
+msgid "World ::id:: removed"
+msgstr "World ::id:: removed"
+
 msgid "World X"
 msgstr "World X"
 
@@ -3691,8 +3946,17 @@ msgstr "You can't delete the last level."
 msgid "You can't delete the last world."
 msgstr "You can't delete the last world."
 
+msgid "You cannot edit an image here."
+msgstr "You cannot edit an image here."
+
 msgid "You cannot have more than ::n:: ::name::."
 msgstr "You cannot have more than ::n:: ::name::."
+
+msgid "You don't have system permissions to access this directory!"
+msgstr "You don't have system permissions to access this directory!"
+
+msgid "You don't have system permissions to read or write a file in this directory!"
+msgstr "You don't have system permissions to read or write a file in this directory!"
 
 msgid "You don't have to fill all the tiles! The important ones in most scenarios are the ones in the green area."
 msgstr "You don't have to fill all the tiles! The important ones in most scenarios are the ones in the green area."
@@ -3733,6 +3997,12 @@ msgstr "auto"
 msgid "auto-chain"
 msgstr "auto-chain"
 
+msgid "body {\n			margin: 0;\n			padding: 16px;\n			overflow: hidden;\n			color: #737f9d;\n			font-family: Roboto, Arial;\n			/* border: 1px solid blue; */\n		}\n\n		* {\n			pointer-events: none;\n			user-select: none;\n		}\n\n		@font-face {\n			font-family: Roboto;\n			src: url(\"fonts/RobotoCondensed-Light.ttf\");\n		}\n\n		@font-face {\n			font-family: Roboto Bold;\n			src: url(\"fonts/RobotoCondensed-Bold.ttf\");\n		}\n\n\n		.windowWrapper {\n			display: grid;\n			align-items: center;\n			justify-content: center;\n			width: 100%;\n			height: 100%;\n		}\n\n		.splashWrapper {\n			position: relative;\n			display: grid;\n			grid-template-rows: min-content min-content;\n			box-sizing: border-box;\n			overflow: hidden;\n\n			box-shadow: 0px 0px 16px #232a3880 inset,\n				0px 4px 8px rgba(0,0,0, 0.4),\n				0px 0px 32px rgba(0,0,0, 0.3);\n\n			border-top-right-radius: 24px;\n\n			/* background: #14171b80; */\n		}\n\n		img.ldtkIcon {\n			width: auto;\n			height: 200px;\n		}\n\n		.version {\n			display: grid;\n			grid-template-columns: auto min-content min-content;\n\n			color: #fc0;\n			white-space: nowrap;\n			font-size: 20pt;\n			line-height: 1em;\n\n			background: #14171b;\n			padding: 10px;\n			padding-top: 0;\n		}\n\n		.version .filler {\n			background-color: #252a33;\n			margin-right: 6px;\n		}\n		.version #mainVersion,\n		.version #patchVersion {\n			display: flex;\n			align-items: center;\n		}\n		.version #mainVersion {\n			font-weight: bold;\n		}"
+msgstr "body {\n			margin: 0;\n			padding: 16px;\n			overflow: hidden;\n			color: #737f9d;\n			font-family: Roboto, Arial;\n			/* border: 1px solid blue; */\n		}\n\n		* {\n			pointer-events: none;\n			user-select: none;\n		}\n\n		@font-face {\n			font-family: Roboto;\n			src: url(\"fonts/RobotoCondensed-Light.ttf\");\n		}\n\n		@font-face {\n			font-family: Roboto Bold;\n			src: url(\"fonts/RobotoCondensed-Bold.ttf\");\n		}\n\n\n		.windowWrapper {\n			display: grid;\n			align-items: center;\n			justify-content: center;\n			width: 100%;\n			height: 100%;\n		}\n\n		.splashWrapper {\n			position: relative;\n			display: grid;\n			grid-template-rows: min-content min-content;\n			box-sizing: border-box;\n			overflow: hidden;\n\n			box-shadow: 0px 0px 16px #232a3880 inset,\n				0px 4px 8px rgba(0,0,0, 0.4),\n				0px 0px 32px rgba(0,0,0, 0.3);\n\n			border-top-right-radius: 24px;\n\n			/* background: #14171b80; */\n		}\n\n		img.ldtkIcon {\n			width: auto;\n			height: 200px;\n		}\n\n		.version {\n			display: grid;\n			grid-template-columns: auto min-content min-content;\n\n			color: #fc0;\n			white-space: nowrap;\n			font-size: 20pt;\n			line-height: 1em;\n\n			background: #14171b;\n			padding: 10px;\n			padding-top: 0;\n		}\n\n		.version .filler {\n			background-color: #252a33;\n			margin-right: 6px;\n		}\n		.version #mainVersion,\n		.version #patchVersion {\n			display: flex;\n			align-items: center;\n		}\n		.version #mainVersion {\n			font-weight: bold;\n		}"
+
+msgid "body, button, select, input, textarea, h1, h2, h3, h4, h5, .help, ul.niceList, dl.form, .collapser, .title, .tip .text, .notification .content {\n			font-family: Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans CJK SC\", \"WenQuanYi Micro Hei\", sans-serif;\n		}"
+msgstr "body, button, select, input, textarea, h1, h2, h3, h4, h5, .help, ul.niceList, dl.form, .collapser, .title, .tip .text, .notification .content {\n			font-family: Roboto, -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Microsoft YaHei\", \"PingFang SC\", \"Noto Sans CJK SC\", \"WenQuanYi Micro Hei\", sans-serif;\n		}"
+
 msgid "bug"
 msgstr "bug"
 
@@ -3759,6 +4029,12 @@ msgstr "function parseMd(rawMarkdown, outputId) {\n		document.getElementById(out
 
 msgid "group"
 msgstr "group"
+
+msgid "if (window.module)\n			module = window.module;"
+msgstr "if (window.module)\n			module = window.module;"
+
+msgid "if( typeof module === 'object' ) {\n			window.module = module;\n			module = undefined;\n		}"
+msgstr "if( typeof module === 'object' ) {\n			window.module = module;\n			module = undefined;\n		}"
 
 msgid "in any level"
 msgstr "in any level"
@@ -3877,8 +4153,35 @@ msgstr "top="
 msgid "when max is reached."
 msgstr "when max is reached."
 
+msgid "window.$ = window.jQuery = window.jquery = require('./js/jquery.min.js');"
+msgstr "window.$ = window.jQuery = window.jquery = require('./js/jquery.min.js');"
+
+msgid "ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ"
+msgstr "ÃÂÃÂÃÂÃÂ¢ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ"
+
+msgid "ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ"
+msgstr "ÃÂÃÂ¢ÃÂÃÂÃÂÃÂ"
+
+msgid "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¯ÃÂÃÂ¸ÃÂÃÂ"
+msgstr "ÃÂÃÂ°ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ¯ÃÂÃÂ¸ÃÂÃÂ"
+
+msgid "ÃÂ¢ÃÂÃÂ"
+msgstr "ÃÂ¢ÃÂÃÂ"
+
+msgid "ÃÂ°ÃÂÃÂÃÂÃÂ¯ÃÂ¸ÃÂ"
+msgstr "ÃÂ°ÃÂÃÂÃÂÃÂ¯ÃÂ¸ÃÂ"
+
+msgid "Ã¢ÂÂ"
+msgstr "Ã¢ÂÂ"
+
+msgid "Ã°ÂÂÂÃ¯Â¸Â"
+msgstr "Ã°ÂÂÂÃ¯Â¸Â"
+
 msgid "â"
 msgstr "â"
+
+msgid "ðï¸"
+msgstr "ðï¸"
 
 msgid "🗑️"
 msgstr "🗑️"
